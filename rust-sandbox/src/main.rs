@@ -6,6 +6,29 @@ fn divide_by_5(value: i32) -> i32 {
     value / 5 //Implicit return
 }
 
+#[derive(PartialEq, Debug)]
+enum Transmission {
+    Manual,
+    SemiAuto,
+    Automatic,
+}
+struct Car {
+    color: String,
+    transmission: Transmission,
+    convertible: bool,
+    mileage: u32,
+}
+
+fn car_factory(color: String, transmission: Transmission, converitble: bool) -> Car {
+    let car = Car {
+        color: color,
+        transmission: transmission,
+        convertible: converitble,
+        mileage: 0,
+    };
+    return car;
+}
+
 fn main() {
     print!("{}[2J", 27 as char);
     println!("Hello, world!");
@@ -129,5 +152,23 @@ fn main() {
         we_load, we_click, we_key
     );
 
-    println!("10 divided by 5 is: {}", divide_by_5(10))
+    println!("10 divided by 5 is: {}", divide_by_5(10));
+
+    let mut car = car_factory(String::from("Red"), Transmission::Manual, false);
+    println!(
+        "Car 1 = {}, {:?} transmission, convertible: {}, mileage: {}",
+        car.color, car.transmission, car.convertible, car.mileage
+    );
+
+    car = car_factory(String::from("Silver"), Transmission::Automatic, true);
+    println!(
+        "Car 2 = {}, {:?} transmission, convertible: {}, mileage: {}",
+        car.color, car.transmission, car.convertible, car.mileage
+    );
+
+    car = car_factory(String::from("Yellow"), Transmission::SemiAuto, false);
+    println!(
+        "Car 3 = {}, {:?} transmission, convertible: {}, mileage: {}",
+        car.color, car.transmission, car.convertible, car.mileage
+    );
 }
