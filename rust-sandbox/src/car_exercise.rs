@@ -19,11 +19,20 @@ struct Car {
 }
 
 fn car_quality(miles: u32) -> (Age, u32) {
-    (Age::New, miles)
+    let age = if miles == 0 { Age::New } else { Age::Used };
+
+    (age, miles)
 }
 
 fn car_factory(color: String, motor: Transmission, roof: bool, miles: u32) -> Car {
     let age = car_quality(miles);
+
+    if age.0 == Age::Used && roof {
+        println!(
+            "Prepare a used car: {:?}, {}, Hard top, {} miles\n",
+            motor, color, miles
+        );
+    }
 
     Car {
         color,
