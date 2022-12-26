@@ -27,12 +27,14 @@ fn car_quality(miles: u32) -> (Age, u32) {
 fn car_factory(color: String, motor: Transmission, roof: bool, miles: u32) -> Car {
     let age = car_quality(miles);
 
-    if age.0 == Age::Used && roof {
-        println!(
-            "Prepare a used car: {:?}, {}, Hard top, {} miles\n",
-            motor, color, miles
-        );
-    }
+    let car_type = if age.1 > 0 { "used car" } else { "new car" };
+
+    let roof_type = if roof { "Hard Top" } else { "Convertible" };
+
+    println!(
+        "Prepare a {}: {:?}, {}, {}, {} miles\n",
+        car_type, motor, color, roof_type, miles
+    );
 
     Car {
         color,
