@@ -1,3 +1,6 @@
+mod car_exercise;
+mod iterable;
+
 fn divide_by_5(value: i32) -> i32 {
     if value == 0 {
         return value; // Early return
@@ -12,6 +15,7 @@ enum Transmission {
     SemiAuto,
     Automatic,
 }
+
 struct Car {
     color: String,
     transmission: Transmission,
@@ -21,8 +25,8 @@ struct Car {
 
 fn car_factory(color: String, transmission: Transmission, converitble: bool) -> Car {
     let car = Car {
-        color: color,
-        transmission: transmission,
+        color,
+        transmission,
         convertible: converitble,
         mileage: 0,
     };
@@ -171,4 +175,11 @@ fn main() {
         "Car 3 = {}, {:?} transmission, convertible: {}, mileage: {}",
         car.color, car.transmission, car.convertible, car.mileage
     );
+
+    //Here I'll start to execute other scripts
+    println!("--------------------Array-------------------------");
+    iterable::main();
+    println!("---------------------Cars--------------------------");
+    car_exercise::main();
+    println!("---------------------End---------------------------");
 }
