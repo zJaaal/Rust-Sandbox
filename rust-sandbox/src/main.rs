@@ -65,7 +65,7 @@ fn main() {
     struct Grades(i32, i32, i32);
 
     let student = Student {
-        name: "Jalinson".to_owned(),
+        name: "Jalinson".to_owned(), // &str and String are not the same
         age: 21,
         remote: false,
     };
