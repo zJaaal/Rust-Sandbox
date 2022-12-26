@@ -51,13 +51,13 @@ fn car_factory(order: u32, miles: u32) -> Car {
 }
 
 pub fn main() {
-    let mut orders: HashMap<i32, Car> = HashMap::new();
+    let mut orders: HashMap<u32, Car> = HashMap::new();
 
     for i in 1..11 {
         let miles = rand::thread_rng().gen_range(0..100000);
         let car = car_factory(i, miles);
-        orders.insert(i as i32, car);
+        orders.insert(i, car);
 
-        println!("Order #{}: {:?}", i, orders.get(&(i as i32)).unwrap())
+        println!("Order #{}: {:?}", i, orders.get(&i))
     }
 }
