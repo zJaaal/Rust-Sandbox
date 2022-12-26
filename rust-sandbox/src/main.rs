@@ -1,5 +1,6 @@
 mod car_exercise;
 mod iterable;
+mod loop_exercise;
 
 fn divide_by_5(value: i32) -> i32 {
     if value == 0 {
@@ -181,5 +182,7 @@ fn main() {
     iterable::main();
     println!("---------------------Cars--------------------------");
     car_exercise::main();
+    println!("---------------------Loop--------------------------");
+    loop_exercise::main();
     println!("---------------------End---------------------------");
 }
