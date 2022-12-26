@@ -1,4 +1,5 @@
 fn main() {
+    print!("{}[2J", 27 as char);
     println!("Hello, world!");
     //This way you can print variables in a template
     println!(
@@ -44,4 +45,35 @@ fn main() {
     let my_str: &str = "This is a string";
 
     println!("I have a char: {}\nI have a string: {}", my_char, my_str);
+
+    //Tuple type
+    let my_languages = ("JavaScript", "TypeScript", "C#", "now learning Rust");
+
+    println!(
+        "My languages are: {}, {}, {} and {}",
+        my_languages.0, my_languages.1, my_languages.2, my_languages.3
+    );
+
+    //structs
+
+    struct Student {
+        name: String,
+        age: i32,
+        remote: bool,
+    }
+
+    struct Grades(i32, i32, i32);
+
+    let student = Student {
+        name: "Jalinson".to_owned(),
+        age: 21,
+        remote: false,
+    };
+
+    let my_grades = Grades(19, 20, 17);
+
+    println!(
+        "Hi my name is: {}\nMy grade last year was: {}",
+        student.name, my_grades.0
+    )
 }
