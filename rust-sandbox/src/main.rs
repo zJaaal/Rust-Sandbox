@@ -31,4 +31,17 @@ fn main() {
     let shadow_num = shadow_num * 2;
 
     println!("The number is {}.", shadow_num);
+
+    //Boolean
+    let is_bigger: bool = 1 > 4;
+
+    println!("is 1 bigger that 4? > {}", is_bigger);
+
+    //There are multiple integers type signed and unsigned,
+    //the difference are their max-min values and how they behave on overflow
+
+    let my_char: char = 'W';
+    let my_str: &str = "This is a string";
+
+    println!("I have a char: {}\nI have a string: {}", my_char, my_str);
 }
