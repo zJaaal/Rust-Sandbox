@@ -5,9 +5,7 @@ use std::path::PathBuf;
 fn read_file_contents(path: PathBuf) -> Result<String, Error> {
     let mut string = String::new();
 
-    let mut file = File::open(path)?;
-
-    file.read_to_string(&mut string)?;
+    File::open(path)?.read_to_string(&mut string)?;
 
     Ok(string)
 }
