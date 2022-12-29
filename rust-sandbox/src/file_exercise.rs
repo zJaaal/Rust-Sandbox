@@ -23,6 +23,13 @@ pub fn main() {
         "{}",
         read_file_contents(PathBuf::from("src/example.txt")).unwrap()
     );
+
+    println!(
+        "{}",
+        read_file_contents(PathBuf::from("non-existent-file.txt"))
+            .unwrap_or("Lmao this doesn't exist".to_owned())
+    );
+
     if read_file_contents(PathBuf::from("src/example.txt")).is_ok() {
         println!("The program found the example file.");
     }
