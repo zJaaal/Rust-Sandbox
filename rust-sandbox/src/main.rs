@@ -6,6 +6,7 @@ mod iterable;
 mod lifetime;
 mod loop_exercise;
 mod person;
+mod two_sum;
 
 fn divide_by_5(value: i32) -> i32 {
     if value == 0 {
@@ -198,5 +199,6 @@ fn main() {
     lifetime::main();
     println!("---------------------CodeWars----------------------");
     println!("{}", freq_seq::freq_seq("Hello world", "-"));
+    println!("{:?}", two_sum::two_sum(&[1234, 5678, 9012], 14690));
     println!("---------------------End---------------------------");
 }
