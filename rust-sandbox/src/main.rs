@@ -39,7 +39,6 @@ fn car_factory(color: String, transmission: Transmission, converitble: bool) -> 
 }
 
 fn main() {
-    print!("{}[2J", 27 as char);
     println!("Hello, world!");
     //This way you can print variables in a template
     println!(
