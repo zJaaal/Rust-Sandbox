@@ -1,5 +1,6 @@
 mod car_exercise;
 mod errors;
+mod file_exercise;
 mod iterable;
 mod loop_exercise;
 mod person;
@@ -190,5 +191,7 @@ fn main() {
     errors::main();
     println!("---------------------Person------------------------");
     person::main();
+    println!("---------------------Files-------------------------");
+    file_exercise::main();
     println!("---------------------End---------------------------");
 }
