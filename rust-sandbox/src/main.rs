@@ -2,6 +2,7 @@ mod car_exercise;
 mod errors;
 mod file_exercise;
 mod iterable;
+mod lifetime;
 mod loop_exercise;
 mod person;
 
@@ -193,5 +194,7 @@ fn main() {
     person::main();
     println!("---------------------Files-------------------------");
     file_exercise::main();
+    println!("---------------------Lifetime----------------------");
+    lifetime::main();
     println!("---------------------End---------------------------");
 }
