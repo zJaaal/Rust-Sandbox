@@ -5,15 +5,9 @@ use std::path::PathBuf;
 fn read_file_contents(path: PathBuf) -> Result<String, Error> {
     let mut string = String::new();
 
-    let mut file = match File::open(path) {
-        Ok(file_handle) => file_handle,
-        Err(io_error) => return Err(io_error),
-    };
+    let mut file = File::open(path)?;
 
-    match file.read_to_string(&mut string) {
-        Ok(_) => (),
-        Err(read_error) => return Err(read_error),
-    }
+    file.read_to_string(&mut string)?;
 
     Ok(string)
 }
