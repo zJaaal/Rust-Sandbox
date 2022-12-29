@@ -1,6 +1,7 @@
 mod car_exercise;
 mod errors;
 mod file_exercise;
+mod freq_seq;
 mod iterable;
 mod lifetime;
 mod loop_exercise;
@@ -195,5 +196,7 @@ fn main() {
     file_exercise::main();
     println!("---------------------Lifetime----------------------");
     lifetime::main();
+    println!("---------------------CodeWars----------------------");
+    println!("{}", freq_seq::freq_seq("Hello world", "-"));
     println!("---------------------End---------------------------");
 }
