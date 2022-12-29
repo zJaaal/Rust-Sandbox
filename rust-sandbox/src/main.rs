@@ -182,7 +182,7 @@ fn main() {
     );
 
     //Here I'll start to execute other scripts
-    println!("--------------------Array-------------------------");
+    println!("---------------------Array-------------------------");
     iterable::main();
     println!("---------------------Cars--------------------------");
     car_exercise::main();
