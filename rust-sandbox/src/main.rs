@@ -2,6 +2,7 @@ mod car_exercise;
 mod errors;
 mod file_exercise;
 mod freq_seq;
+mod groups;
 mod iterable;
 mod lifetime;
 mod loop_exercise;
@@ -199,7 +200,8 @@ fn main() {
     println!("---------------------Lifetime----------------------");
     lifetime::main();
     println!("---------------------Traits------------------------");
-    traits::main();
+    println!("---------------------Groups------------------------");
+    groups::main();
     println!("---------------------CodeWars----------------------");
     println!("{}", freq_seq::freq_seq("Hello world", "-"));
     println!("{:?}", two_sum::two_sum(&[1234, 5678, 9012], 14690));
