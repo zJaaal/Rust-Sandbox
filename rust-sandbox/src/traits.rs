@@ -15,6 +15,15 @@ struct Triangle {
     base: f64,
     height: f64,
 }
+struct Container<T> {
+    value: T,
+}
+
+impl<T> Container<T> {
+    pub fn new(value: T) -> Self {
+        Container { value }
+    }
+}
 
 impl Area for Circle {
     fn area(&self) -> f64 {
@@ -58,5 +67,17 @@ pub fn main() {
 
     println!("Circle area: {}", calculate_area(circle));
     println!("Rectangle area: {}", calculate_area(rectangle));
-    println!("Triangle area: {}", calculate_area(triangle)); //this doesn't compile if Triangle doesn't implement Area
+    println!("Triangle area: {}", calculate_area(triangle)); //this won't compile if Triangle doesn't implement Area
+
+    //Generic traits
+    assert_eq!(Container::new(42).value, 42);
+    assert_eq!(Container::new(3.14).value, 3.14);
+    assert_eq!(Container::new("Foo").value, "Foo");
+    assert_eq!(
+        Container::new(String::from("Bar")).value,
+        String::from("Bar")
+    );
+    assert_eq!(Container::new(true).value, true);
+    assert_eq!(Container::new(-12).value, -12);
+    assert_eq!(Container::new(Some("text")).value, Some("text"));
 }
