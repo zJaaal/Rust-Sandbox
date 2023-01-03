@@ -1,7 +1,7 @@
 mod car_exercise;
+mod codewars;
 mod errors;
 mod file_exercise;
-mod freq_seq;
 mod groups;
 mod iterable;
 mod lifetime;
@@ -10,9 +10,10 @@ mod modules;
 mod person;
 mod test;
 mod traits;
-mod two_sum;
+// mod two_sum;
 
-mod find;
+// mod find;
+// mod freq_seq;
 
 fn divide_by_5(value: i32) -> i32 {
     if value == 0 {
@@ -210,8 +211,9 @@ fn main() {
     println!("---------------------Modules-----------------------");
     modules::main();
     println!("---------------------CodeWars----------------------");
-    println!("{}", freq_seq::freq_seq("Hello world", "-"));
-    println!("{:?}", two_sum::two_sum(&[1234, 5678, 9012], 14690));
-    find::main();
+    println!("{}", codewars::freq_seq("Hello world", "-"));
+    println!("{:?}", codewars::two_sum(&[1234, 5678, 9012], 14690));
+    println!("{:?}", codewars::add_length("you will win"));
+    codewars::main();
     println!("---------------------End---------------------------");
 }
