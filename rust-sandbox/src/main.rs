@@ -214,6 +214,10 @@ fn main() {
     println!("{}", codewars::freq_seq("Hello world", "-"));
     println!("{:?}", codewars::two_sum(&[1234, 5678, 9012], 14690));
     println!("{:?}", codewars::add_length("you will win"));
+    println!(
+        "{:?}",
+        codewars::high_and_low("8 3 -5 42 -1 0 0 -9 4 7 4 -4")
+    );
     codewars::main();
     println!("---------------------End---------------------------");
 }
