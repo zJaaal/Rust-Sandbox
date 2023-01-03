@@ -12,6 +12,8 @@ mod test;
 mod traits;
 mod two_sum;
 
+mod find;
+
 fn divide_by_5(value: i32) -> i32 {
     if value == 0 {
         return value; // Early return
@@ -210,5 +212,6 @@ fn main() {
     println!("---------------------CodeWars----------------------");
     println!("{}", freq_seq::freq_seq("Hello world", "-"));
     println!("{:?}", two_sum::two_sum(&[1234, 5678, 9012], 14690));
+    find::main();
     println!("---------------------End---------------------------");
 }
