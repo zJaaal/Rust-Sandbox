@@ -1,5 +1,18 @@
 mod car_exercise;
-mod codewars;
+mod codewars {
+    pub mod add_length;
+    pub mod find;
+    pub mod freq_seq;
+    pub mod high_low;
+    pub mod two_sum;
+}
+
+use codewars::add_length::add_length;
+use codewars::find::main as find;
+use codewars::freq_seq::freq_seq;
+use codewars::high_low::high_and_low;
+use codewars::two_sum::two_sum;
+
 mod errors;
 mod file_exercise;
 mod groups;
@@ -211,13 +224,10 @@ fn main() {
     println!("---------------------Modules-----------------------");
     modules::main();
     println!("---------------------CodeWars----------------------");
-    println!("{}", codewars::freq_seq("Hello world", "-"));
-    println!("{:?}", codewars::two_sum(&[1234, 5678, 9012], 14690));
-    println!("{:?}", codewars::add_length("you will win"));
-    println!(
-        "{:?}",
-        codewars::high_and_low("8 3 -5 42 -1 0 0 -9 4 7 4 -4")
-    );
-    codewars::main();
+    println!("{}", freq_seq("Hello world", "-"));
+    println!("{:?}", two_sum(&[1234, 5678, 9012], 14690));
+    println!("{:?}", add_length("you will win"));
+    println!("{:?}", high_and_low("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+    find();
     println!("---------------------End---------------------------");
 }
